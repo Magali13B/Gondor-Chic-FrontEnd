@@ -33,3 +33,73 @@
   font-family: 'Montserrat', serif;
   font-style: italic;
 }
+
+.logo-container {
+  margin-bottom: 1px;
+  margin-top: -70px;
+}
+
+.logo {
+  height: 150px;
+  margin-bottom: 1px;
+}
+
+.app-name {
+  margin: 0;
+  font-size: 18px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: normal;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 325px;
+  padding: 10px;
+  display: block;     
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+   
+}
+
+.login-button {
+  margin-top: 50px;
+  width: 150px;        
+  padding: 8px 12px;
+  background-color: #062e0685;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  display: block;     
+  margin: 0 auto; 
+}
+
+.font-section{
+  display: block;             
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: black;
+}
