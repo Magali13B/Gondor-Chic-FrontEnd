@@ -59,7 +59,6 @@
   flex: 1;
   margin: 0 5px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 10px;
   color: white;
@@ -68,8 +67,23 @@
   cursor: pointer;
 }
 
+.signin{
+  background-color: #8DACA0;
+}
+
+.signin:hover{
+  background-color: #bbe4d4;
+}
+
+.login{
+  background-color: #9FC5B7;
+}
+
+.login:hover{
+  background-color: #7e9b90;
+}
+
 .input-field {
-  width: 325px;
   padding: 10px;
   display: block;     
   margin: 0 auto;
@@ -77,12 +91,35 @@
   margin-bottom: 15px;
   border-radius: 10px;
   border: none;
-   
+}
+@media (min-width : 1441px) {
+  .productDay{
+    width: 154px;
+    height: 186px;
+  }
+
+  .login-button{
+    width: 150px;      
+  }
+}
+
+@media(min-width : 1000px) and (max-width:1440px) {
+  .input-field{
+    width: 250px;
+  }
+
+  .productDay{
+    width: 100px;
+    height: 90px;
+  }
+
+  .login-button{
+    width: 125px;
+  }
 }
 
 .login-button {
-  margin-top: 50px;
-  width: 150px;        
+  margin-top: 50px;  
   padding: 8px 12px;
   background-color: #062e0685;
   border: none;
@@ -93,6 +130,10 @@
   cursor: pointer;
   display: block;     
   margin: 0 auto; 
+}
+
+.login-button:hover{
+  background-color: #020f0285;
 }
 
 .font-section{
