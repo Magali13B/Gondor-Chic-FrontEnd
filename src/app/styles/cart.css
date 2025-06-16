@@ -1,0 +1,30 @@
+.cart{
+    padding-top: 20px;
+    display: flex;
+    padding-left: 80%;
+}
+
+.cart-button{
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.number{
+    padding-left: 25%;
+    padding-top: 25%;
+}
+
+.counter{
+    display: inline-block;
+    position: relative;
+    color: white;
+    left: 10px;
+    bottom: 7px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 100%;
+}
