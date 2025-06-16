@@ -1,0 +1,40 @@
+.menu{
+    margin-left: 15%;
+    background: rgba(255, 255, 255, 0.1);
+    height: 40px;
+    width: 65%;
+    border-radius: 10px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+li{
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    position: absolute;
+    left: 82%;
+    top: 10px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    backdrop-filter: blur(5px); /* blur the background behind */
+    -webkit-backdrop-filter: blur(5px); /* for Safari */
+}
+.logo > img{
+    height: 45px;
+}
+
+a:hover{
+    color: white;
+    text-decoration: underline;
+}

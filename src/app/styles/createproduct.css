@@ -7,6 +7,52 @@
   overflow: hidden;
 }
 
+.menu{
+    margin-left: 15%;
+    background: rgba(255, 255, 255, 0.1);
+    height: 40px;
+    width: 65%;
+    border-radius: 10px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+li{
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    position: absolute;
+    left: 82%;
+    top: 10px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    backdrop-filter: blur(5px); /* blur the background behind */
+    -webkit-backdrop-filter: blur(5px); /* for Safari */
+}
+.logo > img{
+    height: 45px;
+}
+
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.title{
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
 .input-group{
     display: flex;
 }
@@ -16,8 +62,7 @@
 }
 
 .card{
-    position: relative;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 15%;
     width: 75%;
     height: 65vh;
@@ -26,33 +71,27 @@
     -webkit-backdrop-filter: blur(5px); /* for Safari */
 }
 
-.logo {
-    position: absolute;
-  top: -70px; /* Move it upward to overlap */
-  left: 50%;
-  transform: translateX(-50%);
-  height: 150px;
-  z-index: 2;
-}
+
 
 .card-group{
-    padding-top: 75px;
+    padding-top: 25px;
 }
 
-input {
+input[type=text],input[type=number],input[type=file],select,button {
     width: 250px;
     padding: 10px;
     display: block;     
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.2);
     margin-bottom: 15px;
-    border-radius: 10px;
     border: none;
 }
 
-textarea{
+input,textarea{
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+}
+
+textarea{
     border: none;
     resize: none;
 }
@@ -73,13 +112,58 @@ textarea:focus{
     display: flex;
 }
 
-.picture-place{
+.misc{
     width: 50%;
+    padding-top: 25px;
 }
 
-.picture{
-    margin-left: 30%;
-    width: 200px;
-    height: 200px;
-    border: 1px dashed grey;
+.input-group,.misc{
+    padding-left: 50px;
+}
+
+.product_checkbox{
+    margin-left: 25px;
+}
+
+.dayproduct,.description{
+    margin-left: 25px;
+}
+
+.dayproduct{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    display: flex;
+}
+
+.description{
+    padding-top: 14px;
+}
+
+textarea{
+    width: 250px;
+    height: 100px;
+}
+
+input[type="checkbox"]{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+.button{
+    padding-top: 10px;
+}
+
+button{
+    width: 180px;
+    border-radius: 10px;
+    background-color: #1D2100;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
 }
