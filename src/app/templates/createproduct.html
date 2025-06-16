@@ -1,24 +1,20 @@
-<nav>
-
-</nav>
+<app-menu />
 <main>
-    
-    
     <div class="card">
-        <div class="logo-container" align="center">
-            <img src="assets/logo.png" alt="Logo" class="logo">
+        <div class="title">
+            <h3>Nouveau produit</h3>
         </div>
         <div class="card-group">
-            <div class="card-element">
-                <div>
-                    <form action="">
+            <form action="">
+                <div class="card-element">
+                    <div>
                         <div class="input-group">
                             <div>
                                 <div class="input-element">Nom du produit</div>
                                 <div><input type="text" name="" id=""></div>
                             </div>
                             <div class="input2">
-                                <div class="input-element">Prix</div>
+                                <div class="input-element">Categorie</div>
                                 <div><input type="number" name="" id=""></div>
                             </div>
                         </div>
@@ -28,24 +24,40 @@
                                 <div><input type="text" name="" id=""></div>
                             </div>
                             <div class="input2">
-                                <div class="input-element">Categorie</div>
+                                <div class="input-element">Quantite</div>
                                 <div><input type="text" name="" id=""></div>
                             </div>
                         </div>
                         <div class="input-group">
-                            <div>
-                                <div class="input-element">Description</div>
-                                <div><textarea name="" id="" cols="75" rows="10"></textarea></div>
+                        <div>
+                                <div>Prix</div>
+                                <div><input type="text" name="" id=""></div>
+                        </div>
+                        <div class="input2">
+                                <div>Photo</div>
+                                <div><input type="file" name="" id=""></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="misc">
+                        <div>
+                            <div class="dayproduct">
+                                <div style="padding-top: 10px;"><label class="custom-checkbox"><input class="checkbox" type="checkbox" name="" id=""><span class="checkmark"></span></label></div>
+                                <div style="padding-top: 11px;padding-left: 15px;"><b>Produit du jour</b></div>
                             </div>
                         </div>
-                    </form>
+                        <div>
+                            <div class="description">
+                                <div class="input-element">Description</div>
+                                <div><textarea name="" id=""></textarea></div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
-                <div class="picture-place">
-                    <div class="picture" align="center">
-                        <div></div>
-                    </div>
-                </div>  
-            </div>
+                <div class="button">
+                    <button>Ajouter</button>
+                </div>
+            </form>
         </div>
     </div>
 </main>
