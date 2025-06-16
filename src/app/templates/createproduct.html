@@ -1,63 +1,88 @@
 <app-menu />
 <main>
-    <div class="card">
-        <div class="title">
-            <h3>Nouveau produit</h3>
-        </div>
-        <div class="card-group">
-            <form action="">
-                <div class="card-element">
-                    <div>
-                        <div class="input-group">
-                            <div>
-                                <div class="input-element">Nom du produit</div>
-                                <div><input type="text" name="" id=""></div>
-                            </div>
-                            <div class="input2">
-                                <div class="input-element">Categorie</div>
-                                <div><input type="number" name="" id=""></div>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div>
-                                <div class="input-element">Reference</div>
-                                <div><input type="text" name="" id=""></div>
-                            </div>
-                            <div class="input2">
-                                <div class="input-element">Quantite</div>
-                                <div><input type="text" name="" id=""></div>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                        <div>
-                                <div>Prix</div>
-                                <div><input type="text" name="" id=""></div>
-                        </div>
-                        <div class="input2">
-                                <div>Photo</div>
-                                <div><input type="file" name="" id=""></div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="misc">
-                        <div>
-                            <div class="dayproduct">
-                                <div style="padding-top: 10px;"><label class="custom-checkbox"><input class="checkbox" type="checkbox" name="" id=""><span class="checkmark"></span></label></div>
-                                <div style="padding-top: 11px;padding-left: 15px;"><b>Produit du jour</b></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="description">
-                                <div class="input-element">Description</div>
-                                <div><textarea name="" id=""></textarea></div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-                <div class="button">
-                    <button>Ajouter</button>
-                </div>
-            </form>
-        </div>
+  <div class="card">
+    <div class="title">
+      <h3>Nouveau produit</h3>
     </div>
+    <div class="card-group">
+      <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+        <div class="card-element">
+          <div>
+            <div class="input-group">
+              <div>
+                <div class="input-element">Nom du produit</div>
+                <div>
+                  <input type="text" name="name" id="name" [(ngModel)]="product.name" required />
+                </div>
+              </div>
+              <div class="input2">
+                <div class="input-element">Categorie</div>
+                <div>
+                  <input type="number" name="category" id="category" />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div>
+                <div class="input-element">Reference</div>
+                <div>
+                  <input type="text" name="reference" id="reference"  />
+                </div>
+              </div>
+              <div class="input2">
+                <div class="input-element">Quantite</div>
+                <div>
+                  <input type="number" name="stock" [(ngModel)]="product.stock" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div>
+                <div>Prix</div>
+                <div>
+                  <input type="number" name="price" id="price" [(ngModel)]="product.price" required />
+                </div>
+              </div>
+              <div class="input2">
+                <div>Photo</div>
+                <div>
+                  <input type="text" name="photo" id="photo"    [(ngModel)]="product.imageUrl" placeholder="https://example.com/image.jpg" required />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="misc">
+            <div>
+              <div class="dayproduct">
+                <div style="padding-top: 10px;">
+                  <label class="custom-checkbox">
+                    <input class="checkbox" type="checkbox" name="isTodayProduct" id="isTodayProduct" [(ngModel)]="product.isProductOfTheDay"  />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div style="padding-top: 11px; padding-left: 15px;">
+                  <b>Produit du jour</b>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="description">
+                <div class="input-element">Description</div>
+                <div>
+                  <textarea name="description" id="description" [(ngModel)]="product.description"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <button class="login-button" type="submit">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </main>
