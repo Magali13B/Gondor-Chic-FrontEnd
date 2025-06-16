@@ -3,6 +3,7 @@ import {Login} from './components/login';
 import { Createproduct } from './components/createproduct';
 import { Acceuil } from './components/acceuil';
 import { Achat } from './components/achat';
+import { Liste } from './components/liste';
 
 export const routes: Routes = [
   {
@@ -16,5 +17,8 @@ export const routes: Routes = [
   },
   {
     path: 'achat',component: Achat
+  },
+  {
+    path : 'liste', component : Liste
   }
 ];
