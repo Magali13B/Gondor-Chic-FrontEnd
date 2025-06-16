@@ -92,6 +92,8 @@
   border-radius: 10px;
   border: none;
 }
+
+
 @media (min-width : 1441px) {
   .productDay{
     width: 154px;

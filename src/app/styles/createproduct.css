@@ -1,0 +1,85 @@
+::ng-deep body{
+  background-image: url("../../assets/cover.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.input-group{
+    display: flex;
+}
+
+.input-group{
+    padding-left: 20px;
+}
+
+.card{
+    position: relative;
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 75%;
+    height: 65vh;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    backdrop-filter: blur(5px); /* blur the background behind */
+    -webkit-backdrop-filter: blur(5px); /* for Safari */
+}
+
+.logo {
+    position: absolute;
+  top: -70px; /* Move it upward to overlap */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 150px;
+  z-index: 2;
+}
+
+.card-group{
+    padding-top: 75px;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    display: block;     
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+textarea{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border: none;
+    resize: none;
+}
+
+textarea:focus{
+    border: none;
+}
+
+.input2{
+    margin-left: 25px;
+}
+
+.input-element{
+    margin-bottom: 10px;
+}
+
+.card-element{
+    display: flex;
+}
+
+.picture-place{
+    width: 50%;
+}
+
+.picture{
+    margin-left: 30%;
+    width: 200px;
+    height: 200px;
+    border: 1px dashed grey;
+}
