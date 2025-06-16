@@ -19,11 +19,12 @@
         <button class="tab signin">S'inscrire</button>
         <button class="tab login">Se connecter</button>
       </div>
+       <form (ngSubmit)="onLogin()" #loginForm="ngForm">
       <label class="font-section" align="center">Email</label>
-      <input type="email" class="input-field" >
+      <input type="email" class="input-field" name="email" [(ngModel)]="user.email" required>
       <label class="font-section" align="center">Mot de passe</label>
-      <input type="password" class="input-field">
-
-      <button class="login-button" >Connexion</button>
+      <input type="password" class="input-field" name="mdp" [(ngModel)]="user.mdp" required>
+      <button class="login-button" type="submit">Connexion</button>
+    </form>
   </div>
 </div>
