@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 export class Cart {
    constructor(private router: Router) {}
 
-  goToCart(){
-    alert("ahhhaaa");
-     //this.router.navigate(['/achat']);
+  goToCart(){ 
+     this.router.navigate(['/achat']);
   }
 }
