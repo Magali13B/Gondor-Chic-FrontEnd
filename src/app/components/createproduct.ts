@@ -36,24 +36,25 @@ export class Createproduct {
 }
 
 
-    onSubmit() {
-    this.productService.addProduct(this.product).subscribe({
-      next: (res) => {
-        alert('Produit ajouté avec succès !');
-        this.product = {
-          name: '',
-          description: '',
-          price: null,
-          stock: null,
-          imageUrl: '',
-          isProductOfTheDay: false
-        };
-      },
-      error: (err) => {
-        console.error('Erreur:', err);
-        alert('Erreur lors de l’ajout du produit.');
-      }
-    });
-  }
+   onSubmit() {
+  this.productService.addProduct(this.product).subscribe({
+    next: (res) => {
+      alert('Produit ajouté avec succès !');
+      this.product = {
+        name: '',
+        description: '',
+        price: null,
+        stock: null,
+        imageUrl: '',
+        isProductOfTheDay: false
+      };
+    },
+    error: (err) => {
+      console.error('Erreur:', err);
+      alert('Erreur lors de l’ajout du produit.');
+    }
+  });
+}
+
 
 }
