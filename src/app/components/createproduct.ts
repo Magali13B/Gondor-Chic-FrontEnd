@@ -3,6 +3,7 @@ import { ProductService } from '../services/productservice';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Menu } from './menu';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createproduct',
@@ -12,7 +13,7 @@ import { Menu } from './menu';
   styleUrls: ['../styles/createproduct.css']
 })
 export class Createproduct {
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,private router: Router) {}
 
   product: any = {
     name: '',
@@ -56,5 +57,8 @@ export class Createproduct {
   });
 }
 
+   goToProductList() {
+    this.router.navigate(['/liste']);
+  }
 
 }

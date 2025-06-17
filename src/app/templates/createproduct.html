@@ -82,7 +82,14 @@
         <div class="button">
           <button class="login-button" type="submit">Ajouter</button>
         </div>
+        
       </form>
+        <form (ngSubmit)="goToProductList()" #productForm="ngForm">
+            <div class="button">
+          <button class="login-button" type="submit">Liste des produits</button>
+        </div> 
+        </form>
+      
     </div>
   </div>
 </main>
