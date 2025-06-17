@@ -5,114 +5,43 @@
         <div style="flex: 3;">
             <div class="table1">
                 <div class="scrollable-table">
-                    <table>
-                        <tr>
-                            <th>Details</th>
-                            <th>Quantité</th>
-                            <th>Prix</th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-info">
-                                    <img src="assets/product.png" class="product-picture" alt="Produit">
-                                    <div class="product-text">
-                                        <p class="product-name">Élixir de guérison elfique</p>
-                                        <p class="product-ref">Réf : ENC-109</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <i class="up">▲</i>
-                                        <span class="number">3</span>
-                                    <i class="down">▼</i>
-                                </div>
-                            </td>
-                            <td class="price-cell">300 Gondariary</td>
-                            <td><img src="assets/cart.png" alt="liste-Produit" width="40" height="40"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-info">
-                                    <img src="assets/product.png" class="product-picture" alt="Produit">
-                                    <div class="product-text">
-                                        <p class="product-name">Élixir de guérison elfique</p>
-                                        <p class="product-ref">Réf : ENC-109</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <i class="up">▲</i>
-                                        <span class="number">3</span>
-                                    <i class="down">▼</i>
-                                </div>
-                            </td>
-                            <td class="price-cell">300 Gondariary</td>
-                            <td><img src="assets/cart.png" alt="liste-Produit" width="40" height="40"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-info">
-                                    <img src="assets/product.png" class="product-picture" alt="Produit">
-                                    <div class="product-text">
-                                        <p class="product-name">Élixir de guérison elfique</p>
-                                        <p class="product-ref">Réf : ENC-109</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <i class="up">▲</i>
-                                        <span class="number">3</span>
-                                    <i class="down">▼</i>
-                                </div>
-                            </td>
-                            <td class="price-cell">300 Gondariary</td>
-                            <td><img src="assets/cart.png" alt="liste-Produit" width="40" height="40"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-info">
-                                    <img src="assets/product.png" class="product-picture" alt="Produit">
-                                    <div class="product-text">
-                                        <p class="product-name">Élixir de guérison elfique</p>
-                                        <p class="product-ref">Réf : ENC-109</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <i class="up">▲</i>
-                                        <span class="number">3</span>
-                                    <i class="down">▼</i>
-                                </div>
-                            </td>
-                            <td class="price-cell">300 Gondariary</td>
-                            <td><img src="assets/cart.png" alt="liste-Produit" width="40" height="40"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-info">
-                                    <img src="assets/product.png" class="product-picture" alt="Produit">
-                                    <div class="product-text">
-                                        <p class="product-name">Élixir de guérison elfique</p>
-                                        <p class="product-ref">Réf : ENC-109</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="quantity">
-                                    <i class="up">▲</i>
-                                        <span class="number">3</span>
-                                    <i class="down">▼</i>
-                                </div>
-                            </td>
-                            <td class="price-cell">300 Gondariary</td>
-                            <td><img src="assets/cart.png" alt="liste-Produit" width="40" height="40"></td>
-                        </tr>
-                    </table>
+                   <table *ngIf="products.length > 0">
+                    <thead>
+                      <tr>
+                        <th>Détails</th>
+                        <th>Quantité</th>
+                        <th>Prix</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let product of products">
+                        <td>
+                          <div class="product-info">
+                            <img [src]="product.imageUrl || 'assets/product.png'" class="product-picture" alt="Produit" />
+                            <div class="product-text">
+                              <p class="product-name">{{ product.name }}</p>
+                              <p class="product-ref">Réf : {{ product.product_ref || 'N/A' }}</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="quantity">
+                            <i class="up">▲</i>
+                            <span class="number">{{ product.stock }}</span>
+                            <i class="down">▼</i>
+                          </div>
+                        </td>
+                        <td class="price-cell">{{ product.price }} Gondariary</td>
+                        <td>
+                          <img src="assets/cart.png" alt="Ajouter au panier" width="40" height="40" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p *ngIf="products.length === 0">Aucun produit trouvé.</p>
+
                 </div>
             </div>
         </div>
